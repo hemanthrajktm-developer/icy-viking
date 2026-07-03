@@ -195,6 +195,7 @@ header {
   letter-spacing: -0.5px;
   background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -238,6 +239,7 @@ header {
   margin-bottom: 12px;
   background: linear-gradient(to right, #ffffff, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -493,12 +495,14 @@ header {
   line-height: 1.1;
   background: white;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .balance-card .card-amount {
   background: linear-gradient(to right, #ffffff, var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1290,4 +1294,73 @@ header {
 
 .summary-detail-value {
   font-weight: 600;
+}
+
+/* File capsules list */
+.selected-files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+  text-align: left;
+}
+
+.file-capsule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.file-capsule-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.file-capsule-remove {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.file-capsule-remove:hover {
+  color: var(--color-error);
+}
+
+/* Currency dropdown settings button */
+.currency-selector-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Password Alert Modal overlay specifically */
+.pw-modal-content {
+  border: 1px solid var(--color-warning);
+  box-shadow: 0 0 35px rgba(251, 191, 36, 0.15);
+}
+
+.pw-input-field {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: white;
+  font-size: 0.95rem;
+  margin: 12px 0;
+}
+
+.pw-input-field:focus {
+  outline: none;
+  border-color: var(--color-warning);
 }
